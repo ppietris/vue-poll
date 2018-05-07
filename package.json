@@ -1,0 +1,23 @@
+{
+  "name": "vue-poll",
+  "version": "0.1.0",
+  "description": "A Vue.js poll component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ppietris/vue-poll.git"
+  },
+  "keywords": [
+    "vue-poll",
+    "poll"
+  ],
+  "author": "ppietris",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ppietris/vue-poll/issues"
+  },
+  "homepage": "https://github.com/ppietris/vue-poll#readme"
+}
