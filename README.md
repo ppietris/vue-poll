@@ -4,7 +4,7 @@
   <img src="https://github.com/ppietris/vue-poll/blob/master/vue-poll-example.jpg?raw=true" alt="Vue-poll example image"/>
 </p>
 
-A Twitter-like poll compoment made with Vue.js 2
+A Twitter-like poll component made with Vue.js 2
 
 [DEMO](https://rawgit.com/ppietris/vue-poll/master/index.html)
 
