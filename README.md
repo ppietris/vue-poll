@@ -1,8 +1,12 @@
 # Vue-poll
 
+<p align="center">
+  <img src="https://rawgit.com/ppietris/vue-poll/master/vue-poll-example.html" alt="Vue-poll example image"/>
+</p>
+
 A Twitter-like poll compoment made with Vue.js 2
 
-DEMO
+[DEMO](https://rawgit.com/ppietris/vue-poll/master/index.html)
 
 ## Prerequisites
 - [Vue.js 2](https://vuejs.org/)
@@ -107,19 +111,24 @@ For example in your `my-poll.vue`:
 - #### question (required) (string-html)
   The question of the poll. 
 
-
 - #### answers (required) (array)
   An array of the answers of the poll. 
 
-  ##### value (required) (integer)
+  **value (required) (integer)**
   A unique value for each answer
-  ##### text (required) (string-html)
+  **text (required) (string-html)**
   Answer's text
-  ##### votes (required) (integer)
+  **votes (required) (integer)**
   Answer's votes
-  ##### custom_class (optional) (string)
-  Custom css class
+  **custom_class (optional) (string)**
+  Custom css class for the answer element
 
+
+- #### showResults (optional) (boolean) (default: false)
+  Set this to true to skip the votting and show the results of the poll
+  
+- #### finalResults (optional) (boolean) (default: false)
+  Set this to true to skip the votting and show the results of the poll. Winner will be highlighted
 
 ## License
 MIT license
