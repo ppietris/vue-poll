@@ -7,6 +7,7 @@
     <title>Vue-poll Example</title>
     <meta name="description" content="A vue-poll example">
     
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <style>
         body{
           font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -31,10 +32,19 @@
             display: block;
             margin: 0 auto;
         }
+		.links-cnt{
+			text-align: center;
+			margin-top: 40px;
+		}
+		.links-cnt .link{
+			color: #2c3e50;
+			text-decoration: none;
+		}
     </style>
     
 </head>
 <body>
+   
     <div id="app">
         <div class="logo-cnt">
             <img src="logo.png" class="logo" alt="vue-logo"/>
@@ -44,9 +54,14 @@
         <div class="cnt">
             <vue-poll v-bind="options" @addvote="addVote"/>
         </div>
+        
+        <div class="links-cnt">
+        	<a href="https://github.com/ppietris/vue-poll" target="_blank" class="link fab fa-github fa-2x"></a>
+        </div>
     </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
-    <script src="dist/vue-poll.min.js"></script>
+    <script src="https://unpkg.com/vue-poll/dist/vue-poll.min.js"></script>
     <script>
         
         Vue.use(VuePoll)
