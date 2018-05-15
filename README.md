@@ -116,10 +116,13 @@ For example in your `my-poll.vue`:
 
   **value (required) (integer)**
   A unique value for each answer
+  
   **text (required) (string-html)**
   Answer's text
+  
   **votes (required) (integer)**
   Answer's votes
+  
   **custom_class (optional) (string)**
   Custom css class for the answer element
 
