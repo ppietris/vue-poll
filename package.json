@@ -11,13 +11,13 @@
     "url": "git+https://github.com/ppietris/vue-poll.git"
   },
   "keywords": [
-	"vue.js",
-	"vue-poll.js",
-	"vue",
-	"votes",
-	"vote",
-	"poll",
-	"opinion polling"
+    "vue.js",
+    "vue-poll.js",
+    "vue",
+    "votes",
+    "vote",
+    "poll",
+    "opinion polling"
   ],
   "author": "ppietris",
   "license": "MIT",

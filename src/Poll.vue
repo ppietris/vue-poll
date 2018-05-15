@@ -2,13 +2,13 @@
     <div class="vue-poll">
         <h3 class="qst" v-html="question"></h3>
         <div class="ans-cnt">
-            <div v-for="(a,index) in calcAnswers" :key="index" :class="{ ans: true, '[a.custom_class]': true}">
+            <div v-for="(a,index) in calcAnswers" :key="index" :class="{ ans: true, [a.custom_class]: (a.custom_class) }">
                 
                 <template v-if="!finalResults">
                     <div v-if="!visibleResults" class="ans-no-vote" @click.prevent="handleVote(a)" >
                         <span class="txt" v-html="a.text"></span>
                     </div>      
-                    <div v-else class="ans-voted" >
+                    <div v-else :class="{ 'ans-voted': true, selected: a.selected }" >
                         <span v-if="a.percent" class="percent" v-text="a.percent"></span>                  
                         <span class="txt" v-html="a.text"></span>                                       
                     </div>
@@ -161,6 +161,11 @@
         display: inline-block;
         margin:0 10px;
     }
+	
+	.vue-poll .ans-cnt .ans-voted.selected .txt:after{
+		content:'✔';
+		margin-left: 10px;
+	}
            
     .vue-poll .ans-cnt .ans .bg{
         position: absolute;
