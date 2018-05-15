@@ -1,6 +1,6 @@
 {
   "name": "vue-poll",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A Vue JS poll component",
   "main": "dist/vue-poll.js",
   "scripts": {
