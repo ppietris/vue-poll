@@ -44,7 +44,7 @@ For example in your `my-poll.vue`:
     
     import VuePoll from 'vue-poll'
     
-    export default: {        
+    export default {        
         data() {
             return {
                 options: {
