@@ -138,8 +138,8 @@ For example in your `my-poll.vue`:
 
 ## Methods
 
-- #### addvote (optional)
-  Callback on add vote. It returns: answer's value, answer's votes, total poll's votes and the custom id 
+- #### addvote (returns object)
+  Callback on add vote. It returns an object that includes: answer's value, answer's votes, total poll's votes and the custom id 
 
 ## License
 MIT license
