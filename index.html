@@ -6,6 +6,7 @@
 
     <title>Vue-poll Example</title>
     <meta name="description" content="A vue-poll example">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <style>
@@ -32,6 +33,11 @@
             display: block;
             margin: 0 auto;
         }
+		@media screen and (max-width:767px){
+			.logo{
+				max-width: 100px
+			}
+		}
 		.links-cnt{
 			text-align: center;
 			margin-top: 40px;
