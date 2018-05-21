@@ -133,5 +133,13 @@ For example in your `my-poll.vue`:
 - #### finalResults (optional) (boolean) (default: false)
   Set this to true to skip the votting and show the results of the poll. Winner will be highlighted
 
+- #### customId (optional) (number)
+  A custom id that will be returned on the addvote method
+
+## Methods
+
+- #### addvote (optional)
+  Callback on add vote. It returns: answer's value, answer's votes, total poll's votes and the custom id 
+
 ## License
 MIT license

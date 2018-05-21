@@ -52,7 +52,11 @@
             finalResults: {
                 type: Boolean,
                 default: false
-            }            
+            },
+			customId: {
+				type: Number,
+				default: false
+			}
         },
         data(){
             return{
@@ -99,13 +103,16 @@
             }
         },
         methods: {
-            handleVote(a){
+            handleVote(a){ //Callback
                 a.votes++
                 a.selected = true
                 this.visibleResults = true
-                
-                //Callback
+                                
                 let obj = { value: a.value, votes: a.votes, totalVotes: this.totalVotes }
+				
+				if (this.customId)
+					obj.customId = this.customId
+				
                 this.$emit('addvote', obj)
             }
         }
