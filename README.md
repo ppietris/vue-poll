@@ -123,15 +123,21 @@ For example in your `my-poll.vue`:
   **votes (required) (integer)**
   Answer's votes
   
+  **selected (required when multiple is true) (boolean)**
+  Selected state of the answer
+  
   **custom_class (optional) (string)**
   Custom css class for the answer element
 
 
 - #### showResults (optional) (boolean) (default: false)
-  Set this to true to skip the votting and show the results of the poll
+  Set this to true to skip the voting and show the results of the poll
   
 - #### finalResults (optional) (boolean) (default: false)
-  Set this to true to skip the votting and show the results of the poll. Winner will be highlighted
+  Set this to true to skip the voting and show the results of the poll. Winner will be highlighted
+
+- #### multiple (optional) (boolean) (default: false)
+  Set this to true for multiple voting
 
 - #### customId (optional) (number)
   A custom id that will be returned on the addvote method
