@@ -138,6 +138,9 @@ For example in your `my-poll.vue`:
 
 - #### multiple (optional) (boolean) (default: false)
   Set this to true for multiple voting
+  
+- #### submitButtonText (optional) (string) (default: Submit)
+  Text of the multiple voting submit button
 
 - #### customId (optional) (number)
   A custom id that will be returned on the addvote method

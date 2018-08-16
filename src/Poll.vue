@@ -29,7 +29,7 @@
         <div class="votes" v-if="showTotalVotes && (visibleResults || finalResults)" v-text="totalVotesFormatted + ' votes'"></div>
         
         <template v-if="!finalResults && !visibleResults && multiple && totalSelections > 0">
-             <a href="#" @click.prevent="handleMultiple" class="submit">Submit</a>
+             <a href="#" @click.prevent="handleMultiple" class="submit" v-text="submitButtonText"></a>
         </template>
        
     </div>
@@ -63,6 +63,10 @@
             multiple: {
                 type: Boolean,
                 default: false
+            },
+            submitButtonText: {
+                type: String,
+                default: 'Submit'
             },
             customId: {
                 type: Number,
