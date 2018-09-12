@@ -25,9 +25,16 @@
                 </template>
                 
             </div>
+
+            <template v-if="!finalResults && !visibleResults && showAddAnswer">
+                <div class="ans">
+                    <input type="text" class="newAnswerInput" v-model="newAnswer" :placeholder="addAnswerPlaceholder" @click="addAnswerPlaceholder = ''" @keyup.enter="addNewAnswer"/>
+                </div>
+            </template>
         </div>
         <div class="votes" v-if="showTotalVotes && (visibleResults || finalResults)" v-text="totalVotesFormatted + ' votes'"></div>
         
+
         <template v-if="!finalResults && !visibleResults && multiple && totalSelections > 0">
              <a href="#" @click.prevent="handleMultiple" class="submit" v-text="submitButtonText"></a>
         </template>
@@ -47,6 +54,14 @@
             answers: {
                 type: Array,
                 required: true
+            },
+            addAnswerPlaceholder: {
+                type: String,
+                default: 'Add your answer'
+            },
+            addAnswer:{
+                type: Number,
+                default: 0
             },
             showResults: {
                 type: Boolean,
@@ -75,7 +90,9 @@
         },
         data(){
             return{
-                visibleResults: JSON.parse(this.showResults)
+                visibleResults: JSON.parse(this.showResults),
+                newAnswer: '',
+                addedAnswersCounter: 0
             }
         },
         computed: {           
@@ -119,9 +136,25 @@
             },
             totalSelections(){
                 return this.calcAnswers.filter(a => a.selected).length
+            },
+            showAddAnswer(){
+                return this.addedAnswersCounter < this.addAnswer
             }
         },
         methods: {
+            addNewAnswer(){
+                let length  = this.answers.length
+                this.answers.push(
+                    {
+                        value: length + 1,
+                        text: this.newAnswer,
+                        votes: 0,
+                        selected: false
+                    }
+                )
+                this.addAnswer = false
+                this.addedAnswersCounter = ++this.addedAnswersCounter;
+            },
             handleMultiple(){
                 
                 let arSelected = []
@@ -193,7 +226,7 @@
     }
     .vue-poll .ans-cnt .ans{
         position: relative;
-        margin-top: 10px;
+        margin-bottom: 10px;
     }
     .vue-poll .ans-cnt .ans:first-child{
         margin-top: 0;
@@ -282,5 +315,25 @@
         padding: 10px 25px;
         border-radius: 5px;
         
+    }
+
+    .vue-poll .newAnswerInput{
+        padding:5px 0;
+        border-radius: 5px;
+        box-sizing:border-box;
+        display:block;
+        text-align: center;
+        color: #41b882;
+        border: 2px solid #41b882;
+        width:100%;
+        color: white;
+        background: #41b882;
+    }
+    .vue-poll .newAnswerInput::placeholder{
+        color:white;
+    }
+    .vue-poll .newAnswerInput .selected{
+        background:white;
+        color: #41b882;
     }
 </style>
