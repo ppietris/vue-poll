@@ -59,7 +59,7 @@
                 type: String,
                 default: 'Add your answer'
             },
-            addAnswer:{
+            acceptNewAnswers:{
                 type: Number,
                 default: 0
             },
@@ -138,7 +138,7 @@
                 return this.calcAnswers.filter(a => a.selected).length
             },
             showAddAnswer(){
-                return this.addedAnswersCounter < this.addAnswer
+                return this.addedAnswersCounter < this.acceptNewAnswers
             }
         },
         methods: {
@@ -152,7 +152,7 @@
                         selected: false
                     }
                 )
-                this.addAnswer = false
+                this.acceptNewAnswers = false
                 this.addedAnswersCounter = ++this.addedAnswersCounter;
             },
             handleMultiple(){
