@@ -130,7 +130,7 @@ For example in your `my-poll.vue`:
   Custom css class for the answer element
 
 - #### addAnswer (optional) (number) (default: 0)
-  0 means user can not add any answer. 
+  0 means user can not add any answer.
   If you want user can add one or many answer, set any number for insertion limit.
 
 - #### showResults (optional) (boolean) (default: false)
