@@ -133,6 +133,9 @@ For example in your `my-poll.vue`:
   0 means user can not add any answer.
   If you want user can add one or many answer, set any number for insertion limit.
 
+- #### addAnswerPlaceholder (optional) (string) (default: Add your answer)
+  You can change the placeholder.
+
 - #### showResults (optional) (boolean) (default: false)
   Set this to true to skip the voting and show the results of the poll
   
