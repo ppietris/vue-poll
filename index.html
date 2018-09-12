@@ -1,81 +1,92 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
 
     <title>Vue-poll Example</title>
     <meta name="description" content="A vue-poll example">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
     <style>
-        body{
-          font-family: 'Avenir', Helvetica, Arial, sans-serif;
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;          
+        body {
+            font-family: 'Avenir', Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
-        .cnt, .logo-cnt{
+
+        .cnt,
+        .logo-cnt {
             margin: 0 auto;
             max-width: 500px;
         }
-        .logo-cnt{
+
+        .logo-cnt {
             border-bottom: 1px solid #2c3e50;
             margin-bottom: 40px;
         }
-        h1{
+
+        h1 {
             text-align: center;
             font-size: 35px;
             margin: 10px 0 40px;
             color: #2c3e50;
         }
-        .logo{
+
+        .logo {
             display: block;
             margin: 0 auto;
         }
-		@media screen and (max-width:767px){
-			.logo{
-				max-width: 100px
-			}
-		}
-		.links-cnt{
-			text-align: center;
-			margin-top: 40px;
-		}
-		.links-cnt .link{
-			color: #2c3e50;
-			text-decoration: none;
-		}
+
+        @media screen and (max-width:767px) {
+            .logo {
+                max-width: 100px
+            }
+        }
+
+        .links-cnt {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .links-cnt .link {
+            color: #2c3e50;
+            text-decoration: none;
+        }
     </style>
-    
+
 </head>
+
 <body>
-   
+
     <div id="app">
         <div class="logo-cnt">
-            <img src="logo.png" class="logo" alt="vue-logo"/>
+            <img src="logo.png" class="logo" alt="vue-logo" />
             <h1>Vue-poll Example</h1>
         </div>
-        
+
         <div class="cnt">
-            <vue-poll v-bind="options" @addvote="addVote"/>
+            <vue-poll v-bind="options" @addvote="addVote" />
         </div>
-        
+
         <div class="links-cnt">
-        	<a href="https://github.com/ppietris/vue-poll" target="_blank" class="link fab fa-github fa-2x"></a>
+            <a href="https://github.com/ppietris/vue-poll" target="_blank" class="link fab fa-github fa-2x"></a>
         </div>
     </div>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
     <script src="https://unpkg.com/vue-poll/dist/vue-poll.min.js"></script>
-    
+
     <script>
-        
+
         Vue.use(VuePoll)
-        
+
         new Vue({
             el: '#app',
-            data: function(){
+            data: function () {
                 return {
                     options: {
                         question: 'What\'s your favourite <strong>JS</strong> framework?',
@@ -83,21 +94,22 @@
                             { value: 1, text: 'Vue', votes: 53 },
                             { value: 2, text: 'React', votes: 35 },
                             { value: 3, text: 'Angular', votes: 30 },
-                            { value: 4, text: 'Other', votes: 10 } 
+                            { value: 4, text: 'Other', votes: 10 }
                         ],
                         finalResults: false,
                         showResults: false,
                         multiple: false,
-						customId: 1
+                        customId: 1
                     }
                 }
             },
             methods: {
-                addVote: function(obj){
+                addVote: function (obj) {
                     console.log('You voted ' + obj.value + '!');
                 }
             }
         })
     </script>
 </body>
+
 </html>
