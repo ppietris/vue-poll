@@ -129,6 +129,9 @@ For example in your `my-poll.vue`:
   **custom_class (optional) (string)**
   Custom css class for the answer element
 
+- #### addAnswer (optional) (number) (default: 0)
+- 0 means user can not add any answer.
+- If you want user can add one or many answer, set any number for insertion limit.
 
 - #### showResults (optional) (boolean) (default: false)
   Set this to true to skip the voting and show the results of the poll
