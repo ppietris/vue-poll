@@ -64,7 +64,7 @@
 
     <div id="app">
         <div class="logo-cnt">
-            <img src="logo.png" class="logo" alt="vue-logo" />
+            <img src="../logo.png" class="logo" alt="vue-logo" />
             <h1>Vue-poll Example</h1>
         </div>
 
@@ -78,7 +78,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
-    <script src="https://unpkg.com/vue-poll/dist/vue-poll.min.js"></script>
+    <script src="../dist/vue-poll.min.js"></script>
 
     <script>
 
@@ -91,14 +91,15 @@
                     options: {
                         question: 'What\'s your favourite <strong>JS</strong> framework?',
                         answers: [
-                            { value: 1, text: 'Vue', votes: 53 },
-                            { value: 2, text: 'React', votes: 35 },
-                            { value: 3, text: 'Angular', votes: 30 },
-                            { value: 4, text: 'Other', votes: 10 }
+                            { value: 1, text: 'Vue', votes: 53, selected: false },
+                            { value: 2, text: 'React', votes: 35, selected: false },
+                            { value: 3, text: 'Angular', votes: 30, selected: false },
+                            { value: 4, text: 'Other', votes: 10, selected: false }
                         ],
                         finalResults: false,
                         showResults: false,
-                        multiple: false,
+                        acceptNewAnswers: 1, // Write acceptable max answer count
+                        addAnswerPlaceholder: 'Do you want to add new answer ?',
                         customId: 1
                     }
                 }

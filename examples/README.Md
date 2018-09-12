@@ -1,0 +1,1 @@
+Before run the examples, be sure dist folder exist and plugin is compiled.
