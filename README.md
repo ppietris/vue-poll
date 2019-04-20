@@ -2,7 +2,7 @@
 
 A Twitter-like vote component, made with Vue.js 2
 
-[DEMO](https://rawgit.com/ppietris/vue-poll/master/index.html)
+[DEMO](https://ppietris.github.io/vue-poll/index.html)
 
 <p align="center">
   <img src="https://github.com/ppietris/vue-poll/blob/master/vue-poll-example.jpg?raw=true" alt="Vue-poll example image"/>
