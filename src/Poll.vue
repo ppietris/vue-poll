@@ -155,8 +155,8 @@
                 a.votes++
                 a.selected = true
                 this.visibleResults = true
-                                
-                let obj = { value: a.value, votes: a.votes, totalVotes: this.totalVotes }
+
+                let obj = { value: a.value, votes: a.votes, totalVotes: this.totalVotes,text: a.text }
 				
 				if (this.customId)
 					obj.customId = this.customId
