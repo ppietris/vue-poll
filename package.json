@@ -39,7 +39,7 @@
     "vue-loader": "^11.1.4",
     "vue-style-loader": "^2.0.3",
     "vue-template-compiler": "^2.2.1",
-    "webpack": "1.13.1",
+    "webpack": "5.94.0",
     "webpack-merge": "^4.1.0"
   }
 }
